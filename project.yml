@@ -1,0 +1,8 @@
+name: DevOps Multicloud Plan
+description: Seguimiento semanal del plan de estudios DevOps (12 semanas)
+owner: juanjoconde
+template: basic_kanban
+columns:
+  - name: 📅 Semana Actual
+  - name: 🛠 En curso
+  - name: ✅ Completado
