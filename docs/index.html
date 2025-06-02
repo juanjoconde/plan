@@ -1,16 +1,14 @@
 
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8" />
   <title>Mapa Mental - Plan DevOps Multicloud</title>
-  <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.14.4/dist/browser/view.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.15.3"></script>
 </head>
-
 <body>
-  <svg id="mindmap"></svg>
-  <script type="text/markdown">
+  <textarea style="display:none;">
+
 # Plan de Estudios DevOps Multicloud (12 semanas)
 
 ## Semana 1
@@ -84,14 +82,7 @@
   - Infra + App + Monitoreo
   - Evaluación AZ-104 + AZ-305
   - Retro final
-  </script>
-  <script>
-    const { markmap } = window;
-    const svg = document.querySelector("svg");
-    const script = document.querySelector("script[type='text/markdown']");
-    const content = script.textContent;
-    markmap.Markmap.create(svg, null, content);
-  </script>
-</body>
 
+  </textarea>
+</body>
 </html>
