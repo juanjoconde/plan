@@ -44,7 +44,7 @@ Este repositorio contiene el plan de estudios completo para un grupo de 3 person
 
 ## 🧠 Mapa Mental
 
-![Mapa Mental DevOps Multicloud](docs/mapa_mental.png)
+![Mapa Mental DevOps Multicloud](docs/markmap.svg)
 
 ---
 
