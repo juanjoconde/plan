@@ -42,6 +42,13 @@ Este repositorio contiene el plan de estudios completo para un grupo de 3 person
 
 ---
 
+### 🌐 GitHub Pages
+
+Puedes explorar la versión publicada del repositorio en [https://juanjoconde.github.io/plan/](https://juanjoconde.github.io/plan/).
+Asegúrate de incluir **/plan/** en la ruta para evitar errores 404 al acceder a los archivos.
+
+---
+
 ## 🧠 Mapa Mental
 
 ![Mapa Mental DevOps Multicloud](docs/mapa_mental.png)
