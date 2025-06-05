@@ -1,78 +1,211 @@
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-    }
-    header {
-      background: rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      font-size: 1.5rem;
-      color: #92fe9d;
-      margin: 0;
-    }
-    header a {
-      background: linear-gradient(90deg, #00c9ff, #92fe9d);
-      color: #000;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    header a:hover {
-      background: linear-gradient(90deg, #92fe9d, #00c9ff);
-    }
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 3rem 1rem;
-    }
-    main h2 {
-      font-size: 3rem;
-      background: linear-gradient(90deg, #00c9ff, #92fe9d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
-    }
-    main p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .button {
-      background-color: #00c9ff;
-      border: none;
-      border-radius: 10px;
-      color: black;
-      padding: 1rem 2rem;
-      text-align: center;
-      font-size: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s ease;
-      margin-bottom: 1rem;
-    }
-    .button:hover {
-      background-color: #92fe9d;
-    }
-    img {
-      border-radius: 16px;
-      max-width: 90%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      margin-top: 2rem;
-    }
+:root {
+  --primary-gradient: linear-gradient(90deg, #00c9ff, #92fe9d);
+  --secondary-gradient: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --header-bg: rgba(0, 0, 0, 0.5);
+  --accent-color: #92fe9d;
+  --text-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--secondary-gradient);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header a {
+  background: var(--primary-gradient);
+  color: #000;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 201, 255, 0.3);
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 7rem 2rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0 5rem;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section h3 {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+}
+
+.card h4 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.mindmap-container {
+  width: 100%;
+  height: 800px;
+  border: none;
+  border-radius: 20px;
+  margin: 2rem 0;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-gradient);
+  color: #000;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 201, 255, 0.3);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card h4 {
+  font-size: 2.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .semanas {
   margin-top: 2rem;
 }
@@ -90,7 +223,7 @@
 }
 
 .semanas a {
-  color: #00c9ff;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -99,13 +232,26 @@
 }
 
 footer {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--header-bg);
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
 }
-@media (max-width: 600px) {
-  main h2 {
-    font-size: 2rem;
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
   }
 }
