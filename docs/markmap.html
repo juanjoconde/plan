@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <title>Mapa Mental</title>
-  <style>body{margin:0;font-family:sans-serif}</style>
-  <script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.3.3/dist/index.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script>
-fetch('mapa.md')
-  .then(r => r.text())
-  .then(text => {
-    const { Markmap, Transformer } = window.markmap;
-    const transformer = new Transformer();
-    const { root } = transformer.transform(text);
-    Markmap.create('#mindmap', null, root);
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(()=>{setTimeout(()=>{const{markmap:x,mm:K}=window,P=new x.Toolbar;P.attach(K);const F=P.render();F.setAttribute("style","position:absolute;bottom:20px;right:20px"),document.body.append(F)})})()</script><script>((b,L,T,D)=>{const H=b();window.mm=H.Markmap.create("svg#mindmap",(L||H.deriveOptions)(D),T)})(()=>window.markmap,null,{"content":"Plan de Estudios DevOps Multicloud (12 semanas)","children":[{"content":"Semana 1","children":[{"content":"Fundamentos DevOps y GitHub Actions","children":[{"content":"Repositorios","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"Workflows b&#xe1;sicos","children":[],"payload":{"tag":"li","lines":"5,6"}},{"content":"Actions Marketplace","children":[],"payload":{"tag":"li","lines":"6,8"}}],"payload":{"tag":"li","lines":"3,8"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"Semana 2","children":[{"content":"Docker + Self-Hosted Runners","children":[{"content":"Contenedores","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"Runner local","children":[],"payload":{"tag":"li","lines":"11,12"}},{"content":"Registro de im&#xe1;genes","children":[],"payload":{"tag":"li","lines":"12,14"}}],"payload":{"tag":"li","lines":"9,14"}}],"payload":{"tag":"h2","lines":"8,9"}},{"content":"Semana 3","children":[{"content":"Terraform (AWS + Azure)","children":[{"content":"Provisi&#xf3;n de VPC, EC2, RG, VNet","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"Workspaces","children":[],"payload":{"tag":"li","lines":"17,18"}},{"content":"Variables","children":[],"payload":{"tag":"li","lines":"18,20"}}],"payload":{"tag":"li","lines":"15,20"}}],"payload":{"tag":"h2","lines":"14,15"}},{"content":"Semana 4","children":[{"content":"Azure AZ-104 Core","children":[{"content":"IAM","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"Redes y VMs","children":[],"payload":{"tag":"li","lines":"23,24"}},{"content":"NSGs, Storage","children":[],"payload":{"tag":"li","lines":"24,26"}}],"payload":{"tag":"li","lines":"21,26"}}],"payload":{"tag":"h2","lines":"20,21"}},{"content":"Semana 5","children":[{"content":"AWS Core Essentials","children":[{"content":"IAM","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"EC2, S3, CLI","children":[],"payload":{"tag":"li","lines":"29,30"}},{"content":"VPC Subnets","children":[],"payload":{"tag":"li","lines":"30,32"}}],"payload":{"tag":"li","lines":"27,32"}}],"payload":{"tag":"h2","lines":"26,27"}},{"content":"Semana 6","children":[{"content":"GitHub Actions Avanzado","children":[{"content":"Matrices","children":[],"payload":{"tag":"li","lines":"34,35"}},{"content":"Secrets","children":[],"payload":{"tag":"li","lines":"35,36"}},{"content":"Condiciones","children":[],"payload":{"tag":"li","lines":"36,38"}}],"payload":{"tag":"li","lines":"33,38"}}],"payload":{"tag":"h2","lines":"32,33"}},{"content":"Semana 7","children":[{"content":"Jenkins Pipelines","children":[{"content":"Declarativos","children":[],"payload":{"tag":"li","lines":"40,41"}},{"content":"Docker como agente","children":[],"payload":{"tag":"li","lines":"41,42"}},{"content":"Git + Jenkins","children":[],"payload":{"tag":"li","lines":"42,44"}}],"payload":{"tag":"li","lines":"39,44"}}],"payload":{"tag":"h2","lines":"38,39"}},{"content":"Semana 8","children":[{"content":"Kubernetes + Helm","children":[{"content":"AKS / EKS","children":[],"payload":{"tag":"li","lines":"46,47"}},{"content":"Despliegue de apps","children":[],"payload":{"tag":"li","lines":"47,48"}},{"content":"Charts y templates","children":[],"payload":{"tag":"li","lines":"48,50"}}],"payload":{"tag":"li","lines":"45,50"}}],"payload":{"tag":"h2","lines":"44,45"}},{"content":"Semana 9","children":[{"content":"Azure AZ-305","children":[{"content":"Arquitectura resiliente","children":[],"payload":{"tag":"li","lines":"52,53"}},{"content":"Balanceadores","children":[],"payload":{"tag":"li","lines":"53,54"}},{"content":"Zonas y SLA","children":[],"payload":{"tag":"li","lines":"54,56"}}],"payload":{"tag":"li","lines":"51,56"}}],"payload":{"tag":"h2","lines":"50,51"}},{"content":"Semana 10","children":[{"content":"CI/CD Multicloud","children":[{"content":"Build con Docker","children":[],"payload":{"tag":"li","lines":"58,59"}},{"content":"Infra con Terraform","children":[],"payload":{"tag":"li","lines":"59,60"}},{"content":"Despliegue en K8s","children":[],"payload":{"tag":"li","lines":"60,62"}}],"payload":{"tag":"li","lines":"57,62"}}],"payload":{"tag":"h2","lines":"56,57"}},{"content":"Semana 11","children":[{"content":"Monitoreo y Seguridad","children":[{"content":"Prometheus","children":[],"payload":{"tag":"li","lines":"64,65"}},{"content":"Grafana","children":[],"payload":{"tag":"li","lines":"65,66"}},{"content":"SonarQube, Snyk","children":[],"payload":{"tag":"li","lines":"66,68"}}],"payload":{"tag":"li","lines":"63,68"}}],"payload":{"tag":"h2","lines":"62,63"}},{"content":"Semana 12","children":[{"content":"Proyecto Final y Simulacros","children":[{"content":"Infra + App + Monitoreo","children":[],"payload":{"tag":"li","lines":"70,71"}},{"content":"Evaluaci&#xf3;n AZ-104 + AZ-305","children":[],"payload":{"tag":"li","lines":"71,72"}},{"content":"Retro final","children":[],"payload":{"tag":"li","lines":"72,73"}}],"payload":{"tag":"li","lines":"69,73"}}],"payload":{"tag":"h2","lines":"68,69"}}],"payload":{"tag":"h1","lines":"0,1"}},null)</script>
 </body>
 </html>
