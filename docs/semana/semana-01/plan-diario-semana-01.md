@@ -36,6 +36,8 @@ Comprender los principios de DevOps, dominar lo básico de GitHub y crear tu pri
 - [ ] Modificar el workflow para subir un archivo de ejemplo como artefacto.
 - [ ] Adjuntar scripts y archivos YAML en el archivo de prácticas.
 - [ ] Escribir un breve resumen de lo aprendido y dificultades encontradas en `resumen.md`.
+- [ ] https://skillbuilder.aws/exam-prep/cloud-practitioner realizar curso de 2 hrs
+- [ ] revidar que es cloudfundation.
 - [ ] Preparar dudas o temas para consultar en la retro.
 
 
